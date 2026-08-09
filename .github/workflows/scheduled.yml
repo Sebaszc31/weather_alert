@@ -39,7 +39,8 @@ jobs:
 
       - name: Run script
         env:
-          # Your secrets are available as environment variables
-          # Add more secrets in Settings > Secrets > Actions
+          APPID: ${{ secrets.APPID }}
           TOKEN_TELE: ${{ secrets.TOKEN_TELE }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          
         run: python main.py
